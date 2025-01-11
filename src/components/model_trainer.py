@@ -25,6 +25,8 @@ class ModelTrainer:
     def intitate_model_training(self, train_array, test_array):
         try:
             logging.info('Splitting Dependent and Independent variables from train and test data')
+            logging.info('Train Array Shape : {}'.format(train_array.shape))
+            logging.info('Test Array Shape : {}'.format(test_array.shape))
             X_train, X_test, y_train, y_test = (
                 train_array[:, :-1],
                 test_array[:, :-1],
@@ -32,6 +34,7 @@ class ModelTrainer:
                 test_array[:, -1]
             )
 
+            logging.info('Dependent and Independent variables splitted successfully')
             # Multiple Model Training
             models = {
                 'LinearRegression' : LinearRegression(),
@@ -39,8 +42,8 @@ class ModelTrainer:
                 'Lasso' : Lasso(),
                 'ElasticNet' : ElasticNet()
             }
-
-            model_report:dict=evaluate_model(X_train,y_train,X_test,y_test,models)
+            logging.info('Models Initialized Successfully')
+            model_report:dict=evaluate_model(X_train,X_test,y_train,y_test,models)
             print(model_report)
             print('\n====================================================================================\n')
             logging.info(f'Model Report : {model_report}')
