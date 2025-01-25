@@ -1,23 +1,18 @@
 <html>
-    <body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 10px;">
-        <div style="background-color: white; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 600px; padding: 30px;">
-            <div style="text-align: center; margin-bottom: 30px;">
-                <h2 style="color: #2c3e50; margin: 0; font-size: 22px;">Diamond Price Predictor</h2>
-            </div>
-
-            <div style="text-align: center; margin-bottom: 30px;">
-                <h3 style="color: #2c3e50; margin: 0; font-size: 48px;">{{final_result}}</h3>
-                <p style="color: #7f8c8d; margin-top: 10px;">Estimated Diamond Value</p>
-            </div>
-
-            <!-- Button to Redirect to /predict -->
-            <div style="text-align: center; margin-top: 20px;">
-                <form action="/predict" method="get">
-                    <button type="submit" style="background-color: #3498db; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
-                        Predict Again
-                    </button>
-                </form>
-            </div>
+    <body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 20px; text-align: center;">
+        <div style="background-color: white; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); padding: 40px; max-width: 600px; width: 100%;">
+            <h1 style="color: #2c3e50; margin-bottom: 20px; font-size: 36px; font-weight: bold;">Welcome To Diamond World</h1>
+            
+            <h2 style="color: #34495e; margin-bottom: 30px; font-size: 24px;">Diamond Price Prediction</h2>
+            
+            <a href="/predict" style="display: inline-block; padding: 12px 24px; background-color: #3498db; color: white; text-decoration: none; border-radius: 8px; font-weight: 600; transition: background-color 0.3s ease; margin-bottom: 20px;">
+                Predict Diamond Price
+            </a>
+            
+            <!-- New button added here -->
+            <a href="/predict" style="display: block; padding: 12px 24px; background-color: #e74c3c; color: white; text-decoration: none; border-radius: 8px; font-weight: 600; transition: background-color 0.3s ease; margin-top: 30px;">
+                Go to Prediction Page
+            </a>
         </div>
     </body>
 </html>

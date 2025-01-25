@@ -9,6 +9,15 @@
                 <h3 style="color: #2c3e50; margin: 0; font-size: 48px;">{{final_result}}</h3>
                 <p style="color: #7f8c8d; margin-top: 10px;">Estimated Diamond Value</p>
             </div>
+
+            <!-- Button to Redirect to /predict -->
+            <div style="text-align: center; margin-top: 20px;">
+                <form action="{{ url_for('predict_datapoint') }}" method="get">
+                    <button type="submit" style="background-color: #3498db; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
+                        Predict Again
+                    </button>
+                </form>
+            </div>
         </div>
     </body>
 </html>
