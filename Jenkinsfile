@@ -30,6 +30,9 @@ pipeline{
             }
         }
         stage("Push"){
+            when {
+                expression { return params.PUSH_IMAGE == true }
+            }
             steps{
                 echo "Code pushing in dockerhub is start..."
                 docker_push("diamond-webapp", "latest", "harshpatel4877")
