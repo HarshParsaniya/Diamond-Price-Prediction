@@ -2,8 +2,7 @@ version: "3.8"
 
 services:
   flask:
-    build:
-      context: .
+    image: harshpatel4877/diamond-webapp:latest
     ports:
       - "5000:5000"
     restart: always
