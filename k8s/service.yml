@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: diamond-app-service
+  namespace: nginx
+spec:
+  selector:
+    app: diamond-app
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
+  type: ClusterIP
